@@ -1,3 +1,4 @@
+/*
 //El array de productos fue convertido a formato json para consumirlo de forma asincrona:
 
 //Utilizamos async await.
@@ -25,6 +26,7 @@ const getData = async (url) => {
 
 const API_URL = "../db/db.json";
 getData(API_URL);
+*/
 
 //SELECCIONAR LOS ELEMENTOS CON LOS QUE VAMOS A TRABAJAR:
 
@@ -39,6 +41,54 @@ const contenedorPago = document.querySelector("#contenedor-pago"); //<div> donde
 if (!localStorage.getItem("totalPagar")) {
   localStorage.setItem("totalPagar", JSON.stringify(0));
 }
+//Array de productos con stock:
+//array de productos:
+const tienda = [
+  {
+    id: 1,
+    nombre: "computadora de escritorio hp ",
+    precio: 10500,
+    img: "Compu2.jpeg",
+    stock: 5,
+  },
+  {
+    id: 2,
+    nombre: "laptop Dell Inspiron",
+    precio: 12000,
+    img: "Dell2.jpeg",
+    stock: 6,
+  },
+  {
+    id: 3,
+    nombre: "audifonos hp",
+    precio: 400,
+    img: "audifonoshp2.jpeg",
+    stock: 7,
+  },
+  { id: 4, nombre: "bocinas usb", precio: 500, img: "bocinas.jpg", stock: 8 },
+  {
+    id: 5,
+    nombre: "motorola g14",
+    precio: 5000,
+    img: "moto-g14.jpg",
+    stock: 9,
+  },
+  { id: 6, nombre: "i-pad pro max", precio: 9000, img: "ipad.jpeg", stock: 10 },
+  {
+    id: 7,
+    nombre: "monitor gamer",
+    precio: 6000,
+    img: "monitor gamer.jpg",
+    stock: 4,
+  },
+  {
+    id: 8,
+    nombre: "Laptop HP Pavillion",
+    precio: 8000,
+    img: "lapHP.jpeg",
+    stock: 3,
+  },
+];
 
 //array vacio. Se va llenando con los productos que elige el usuario.
 const carrito = []; //carrito de compras
